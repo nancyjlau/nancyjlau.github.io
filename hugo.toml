@@ -1,0 +1,5 @@
+baseURL = 'http://nancyjlau.github.io/'
+languageCode = 'en-us'
+title = 'root@catgirl ~ $'
+theme = 'archie'
+copyright = "© rose"
