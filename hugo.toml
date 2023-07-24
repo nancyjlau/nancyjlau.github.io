@@ -3,3 +3,38 @@ languageCode = 'en-us'
 title = 'root@catgirl ~ $'
 theme = 'archie'
 copyright = "© rose"
+
+disableKinds = ["RSS"]
+
+[params]
+	mode="toggle"
+
+
+# Social Tags
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/nancyjlau"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/nachoyawn/"
+
+# Main menu Items
+
+[[menu.main]]
+name = "~/home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "~/posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "~/tags"
+url = "/tags"
+weight = 3
