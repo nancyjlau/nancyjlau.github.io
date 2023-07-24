@@ -1,1 +1,14 @@
 # Hi, I'm rose
+I'm currently an undergrad in computer engineering at UC Santa Cruz. I'm interested in cybersecurity, hardware security, reverse engineering, malware, etc.
+
+I like to code in:
+- C/C++
+- Python
+
+but I'm able to use others when needed.
+
+I've been programming since mid-2020 and doing cybersecurity and CTFs since early-2022.
+
+This is just a blog where I'll mostly be posting writeups on stuff I do, but maybe also other things I find interesting.
+
+Now that you're here, why not read some of my [posts](/posts)?
