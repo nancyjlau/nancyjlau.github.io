@@ -8,5 +8,3 @@ tags: [tag1, tag2]
 example text....
 
 {{< zoom-img src="img/test-image.png" >}}
-
-{{ "<script src=\"https://tryhackme.com/badge/786278\"></script>" | safeHTML }}
