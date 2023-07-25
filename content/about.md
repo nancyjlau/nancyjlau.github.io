@@ -1,5 +1,5 @@
 ---
-title:  Hi, I'm rose
+title:  hi, i'm rose
 date: 2023-07-24
 ---
 

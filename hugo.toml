@@ -9,7 +9,10 @@ disableKinds = ["RSS"]
 
 [params]
 	mode="toggle"
-
+	description = "bits about malware development, hardware, and cybersecurity"
+	subtitle = "bits about maldev, hardware, and cybersec"
+	mathjax = true 
+	katex = true 
 
 # Social Tags
 
