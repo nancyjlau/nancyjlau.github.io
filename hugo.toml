@@ -3,7 +3,8 @@ languageCode = 'en-us'
 title = 'root@catgirl ~ $'
 theme = 'archie'
 copyright = "© rose"
-
+favicon = "https://cdn.discordapp.com/attachments/803939510374236210/1133225874792128626/image.png"
+description = "hi"
 disableKinds = ["RSS"]
 
 [params]
@@ -30,11 +31,16 @@ url = "/"
 weight = 1
 
 [[menu.main]]
+name = "~/about"
+url = "/about"
+weight = 2
+
+[[menu.main]]
 name = "~/posts"
 url = "/posts"
-weight = 2
+weight = 3
 
 [[menu.main]]
 name = "~/tags"
 url = "/tags"
-weight = 3
+weight = 4
