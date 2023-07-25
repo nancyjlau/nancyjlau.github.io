@@ -6,9 +6,10 @@
     {{- end -}}
   </div>
   <div class="footer-info">
-    {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{ end }} <a
-      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+    {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} {{ end }}
   </div>
+   <!-- Made with the Archie Theme https://github.com/athul/archie -->
+   <!-- Built with Hugo https://gohugo.io%22%3Ehugo/ -->
 </footer>
 {{ if not .Site.IsServer }}
 {{ template "_internal/google_analytics_async.html" . }}
