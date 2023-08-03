@@ -7,7 +7,7 @@ tags: [Networks, CCNA]
 
 # Networks Notes Part 1
 
-### Intro
+## Intro
 
 Networks: a group of interconnected people or things
 
@@ -22,7 +22,7 @@ WAN (wide area network): connects several LANS together. one such example is the
 Businesses may have private WANs to connect multiple sites together.
 
 
-### Networking Devices 
+## Networking Devices 
 
 Hub, Bridge, Router, Switch
 
@@ -86,7 +86,7 @@ AAAA:AAAA:AAAA    |      CCCC:CCCC:CCCC
   - highly configurable
 
 
-### OSI Model
+## OSI Model
 
 - 7 layers
 - standardize communication
