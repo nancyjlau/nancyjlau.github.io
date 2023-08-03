@@ -19,6 +19,49 @@ tags: [Networks, CCNA]
 
 Businesses may have private WANs to connect multiple sites together.
 
+IP Address
+
+## LAN Topologies  
+Star topology  
+- expensive but scalable in nature
+- prone to failure
+- bigger network scale = more maintenance to keep network functional
+
+Bus topology
+- relies on a single connection (backbone cable)
+- similar to leaf off of a tree
+- prone to becoming slow and bottlenecked
+- cost efficient 
+  - cabling or dedicated networking equipment
+- little redundancy in case of failures
+  - single point of failure of the backbone cable  
+
+Ring topology
+- less prone to bottlenetcks
+- sengs data across loop until reaching destined device
+- one direction for data to travel
+  - easy to troubleshoot
+- not efficient to send data over
+
+## ARP Protocol
+- allows a device to associate its MAC address with an IP address on the network  
+
+2 types of messages
+1. ARP Request
+2. ARP Reply
+
+> When an ARP request is sent, a message is broadcasted to every other device found on a network by the device, asking whether or not the device's MAC address matches the requested IP address. If the device does have the requested IP address, an ARP reply is returned to the initial device to acknowledge this. The initial device will now remember this and store it within its cache (an ARP entry). 
+
+## DHCP Protocol
+ DHCP (Dynamic Host Configuration Protocol)
+- Automatically assigns IP addresses 
+
+3 types of DHCP Packets
+1. DHCP Discover
+2. DHCP Request
+3. DHCP ACK
+
+> When a device connects to a network, if it has not already been manually assigned an IP address, it sends out a request (DHCP Discover) to see if any DHCP servers are on the network. The DHCP server then replies back with an IP address the device could use (DHCP Offer). The device then sends a reply confirming it wants the offered IP Address (DHCP Request), and then lastly, the DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address (DHCP ACK).
 
 ## Networking Devices 
 
@@ -165,4 +208,68 @@ to fix
 
 1. Investigate the specific application or service that is experiencing issues (e.g., web server, email client, file transfer application).
 2. Check if the application is running correctly and if there are any known problems or bugs.
+
+## TCP/IP model  
+A model designed to standardized computer networking  
+(used in the real world)  
+
+| TCP/IP  (old) |  TCP/IP (new)|   OSI Model |
+|---------------|--------------|--------------
+| Appplication  | Application  | Application/Presentation/Session
+| Transport     | Transport    |  Transport
+| Internet      | Network      |  Network
+| Link          | Data Link    |  Data Link
+|               | Physical     |  Physical
+
+Here's the OSI model again for comparison:  
+
+| OSI Model     |  description  |
+|---------------|---------------|
+| layer 7 - application  |  SMTP, FTP, Telnet | 
+| layer 6 - presentation | format data, encryption| 
+| layer 5 - session     | start & stop sessions| 
+| layer 4 - transport    | TCP, UDP, port numbers, | 
+| layer 3 - network      | IP Address, Routers| 
+| layer 2 - data link    | MAC Address, switches| 
+| layer 1 - physical     | cable, network interface cards, hub| 
+
+Let's look at the protocols at each layer of the TCP/IP model:
+
+|  TCP/IP      |   Protocols |
+|--------------|--------------
+| Application  | HTTP, FTP, SMTP |
+| Transport    |  TCP, UDP |
+| Network      |  IP, Routers |
+| Data Link    |  Ethernet, Switches |
+| Physical     |  Cables, NIC |
+ 
+
+### What happens when data is sent over?  
+
+Encapsulation  
+Layer 5 - data  
+Layer 4 - (segment) TCP | data     (adds source & dest port number, seq numbers)  
+Layer 3 - (packet) IP | TCP | data  (source & dest IP address)  
+Layer 2 -  (frame) Ethernet | IP | TCP | Data | Ethernet  (header (mac address) and trailer (error checking))
+Layer 1 - the data is physically sent  
+
+Decapsulation  
+Layer 1 -> 2 - check dest Mac address for the frame
+Layer 3 -> 4 - check packet IP information
+Layer 5 - transport info is read and sent to receiving application
+
+## TCP vs UDP
+
+TCP has ACK and sequence numbers, and a checksum to make sure all data is sent.  
+ ```
+          - SYN ->  
+DEVICE  <- SYN-ACK -    DEVICE  
+          - ACK ->  
+```
+Checksum confirms is data received is correct or not, if there is a mismatch then packets will be dropped.  
+
+UDP sends data without checking, it is good for uses like video streams, online games, and VoIP. TCP is good for web browsing and email.  
+
+### Most common port numbers:  
+{{< zoom-img src="img/common-port-nums.png" >}}  
 
