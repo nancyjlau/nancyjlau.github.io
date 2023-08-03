@@ -15,6 +15,10 @@
 			{{ .Content }}
 		</section>
 
+		<aside>
+			{{ .TableOfContents }}
+		</aside>	
+
 		<div class="post-tags">
 			{{ if ne .Type "page" }}
 			{{ if gt .Params.tags 0 }}
