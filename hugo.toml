@@ -8,7 +8,7 @@ description = "hi"
 disableKinds = ["RSS"]
 
 [params]
-	mode="toggle"
+	mode="auto"
 	description = "bits about malware development, hardware, and cybersecurity"
 	subtitle = "bits about maldev, hardware, and cybersec"
 	mathjax = true 

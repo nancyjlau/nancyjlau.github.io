@@ -11,13 +11,13 @@
 			{{ .Params.tldr }}
 		</div>{{ end }}
 
-		<section class="body">
-			{{ .Content }}
-		</section>
-
 		<aside>
 			{{ .TableOfContents }}
 		</aside>	
+
+		<section class="body">
+			{{ .Content }}
+		</section>
 
 		<div class="post-tags">
 			{{ if ne .Type "page" }}
