@@ -1,7 +1,7 @@
 ---
 title: Networks Notes
 date: 2021-06-20
-description: notes on studying for the CCNA (networking device types & OSI model)
+description: notes on studying for the CCNA
 tags: [Networks, CCNA]
 ---
 ## Intro
@@ -19,7 +19,24 @@ tags: [Networks, CCNA]
 
 Businesses may have private WANs to connect multiple sites together.
 
-IP Address
+## IP Address
+
+An IP address is a logical identifier for an interface that is connected to the network. Two versions of IP are currently in use: IPv4 and IPv6
+
+> The most common is an IPv4 address. It is a 32 bit identifier made up of four 8-bit fields called octets converted from binary to decimal numbers, separated by dots. The first part of an IP address identifies the network on which the host resides, while the second part identifies the particular host on the given network. The network number field is called the network prefix. All hosts on a given network share the same network prefix but must have a unique host number. In classful IP, the class of the address determines the boundary between the network prefix and the host number.
+
+Subnets  
+- The same goes for a subnet mask which is also represented as a number of four bytes (32 bits), ranging from 0 to 255 (0-255).  
+
+
+Subnets use IP addresses in three different ways:
+1. Identify the network address
+2  Identify the host address
+1. Identify the default gateway
+
+{{< zoom-img src="img/subnetting.png" >}}
+
+
 
 ## LAN Topologies  
 Star topology  
@@ -63,6 +80,34 @@ Ring topology
 
 > When a device connects to a network, if it has not already been manually assigned an IP address, it sends out a request (DHCP Discover) to see if any DHCP servers are on the network. The DHCP server then replies back with an IP address the device could use (DHCP Offer). The device then sends a reply confirming it wants the offered IP Address (DHCP Request), and then lastly, the DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address (DHCP ACK).
 
+## DNS (Domain Name System)
+- DNS (Domain Name System) provides a simple way for us to communicate with devices on the internet without remembering complex numbers. 
+
+{{< zoom-img src="img/dns-hierarchy.png" >}}
+
+- TLD (top-level domain)
+1. gTLD (generic top level)
+   - .com, .org, .edu
+2. ccTLD (country code top level)
+   - .ca, .co.uk
+
+- second level domain
+In `google.com`, `.com` is part of the TLD and `google` is part of the second level domain.  
+
+Second level domains are limited to 63 characters and can only use a-z 0-9 and hyphens (cannot sstart or end with hyphens, or consecutive hyphens)
+
+
+DNS Record Types
+- A Record
+  - resolve to IPv4 Addresses
+- AAAA Record
+  - resolve to IPv6 Addresses
+- CNAME Record
+  >  These records resolve to another domain name, for example, TryHackMe's online shop has the subdomain name store.tryhackme.com which returns a CNAME record shops.shopify.com. Another DNS request would then be made to shops.shopify.com to work out the IP address
+- MX Record
+  > These records resolve to the address of the servers that handle the email for the domain you are querying, for example an MX record response for tryhackme.com would look something like alt1.aspmx.l.google.com. These records also come with a priority flag. This tells the client in which order to try the servers, this is perfect for if the main server goes down and email needs to be sent to a backup server.
+- TXT Record
+  > TXT records are free text fields where any text-based data can be stored. TXT records have multiple uses, but some common ones can be to list servers that have the authority to send an email on behalf of the domain (this can help in the battle against spam and spoofed email). They can also be used to verify ownership of the domain name when signing up for third party services.
 ## Networking Devices 
 
 **Hub, Bridge, Router, Switch**
@@ -74,7 +119,7 @@ Ring topology
 - half-duplex
   - can't send + receive data at the same time
 - wastes bandwith
-- hosts receive unwanted data (security riks)
+- hosts receive unwanted data (security risk)
 - replaced by switches
 
 ### Bridges  
