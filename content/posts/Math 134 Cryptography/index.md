@@ -35,7 +35,7 @@ Note that if $a \neq 0$, then $q \neq 0$, so
 So any nonzero number a has finitely many divisors.
 (on the other hand, all $x \in \mathbb{Z}$ divide zero, since $x*0 = 0$)
 
-### 1.3 Lemma: (Division with remainder)
+### 1.3 Lemma (Division with remainder)
 
 Let $a \in \mathbb{Z}$ and $m \in \mathbb{N}$. Then there exist *unique* elements $r, q \in \mathbb{Z}$ satisfying \[a = q*m +r \text{ and } r \in (0, ..., m-1)\]
 The number r is the remainder of *a modulo m*.  
@@ -68,6 +68,7 @@ Let $a \in \mathbb{Z}, m \in \mathbb{N}$, and let r be the only remainder of a m
 
 write $gcd(a,b) = d$
 
-### 1.7 Remark: From the definition, we can note:
+### 1.7 Remark
+From the definition, we can note:
 - $gcd(a,b) = gcd(b,a)$
 - if $a \neq 0, gcd (a,0) = |a|$
