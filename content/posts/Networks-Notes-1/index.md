@@ -315,6 +315,6 @@ Checksum confirms is data received is correct or not, if there is a mismatch the
 
 UDP sends data without checking, it is good for uses like video streams, online games, and VoIP. TCP is good for web browsing and email.  
 
-### Most common port numbers:  
+### Most common port numbers
 {{< zoom-img src="img/common-port-nums.png" >}}  
 
