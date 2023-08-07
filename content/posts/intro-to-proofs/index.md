@@ -8,8 +8,8 @@ tags: [math]
 ## Proof Guidelines
 - Always begin your proof with carefully restating, in words, the assumptions and the result(s) that needs to be proved.
 - A written proof is the presentation of your mathematical ideas. Since it's a presentation, it needs to be narrative, so always replace logical symbols with their English counterparts (e.g. instead of
-$\exist$ write `there exists", instead of $\or$
-write `or' etc.)
+$\exist$ write `"there exists"`, instead of $\vee$
+write `"or"` etc.)
 - Since a written proof is a presentation, the reader is a part of this; therefore use the pronoun `we'.
 - Always write the proof as if it's going to be read by a peer; that's your audience.
 - Within your proof, always highlight or display important equations or calculations and mathematical expressions.
@@ -53,3 +53,7 @@ Since $2k^2 + 2k + 1$ is an integer, we obtain that $n^2 + 1$ is even; as needed
 If you try to provide a direct proof for the example above, you can see that proof by contrapositive provides a cleaner proof than a direct proof. 
 
 Remember the [proof guidelines](https://nancyjlau.github.io/posts/intro-to-proofs/#proof-guidelines)!!
+
+### Proof by Cases
+
+Recall that our aim is to investigate when $\forall x \in S, P(x) \implies Q(x)$ is true whenever $P(x)$ is true for $x \in S$. Such an x can have various properties, one of which being a membership of a subset of S. If we can proof that the given statement is true for each property of $x$, it will be true in general. Breaking our proof in such a manner is called *proof by cases^ (e.g. given $n$ is an integer, we have two cases: n is even or n is odd)
