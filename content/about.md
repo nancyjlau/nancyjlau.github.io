@@ -3,7 +3,7 @@ title:  hi, i'm rose
 date: 2023-07-24
 ---
 
-I'm currently an undergraduate in computer engineering and math at UC Santa Cruz. I'm interested in cybersecurity, hardware security, reverse engineering, malware, etc.
+I'm currently an undergraduate triple majoring in computer engineering, math, and economics at UC Santa Cruz. I'm interested in cybersecurity, hardware security, reverse engineering, malware, etc.
 
 I like to code in:
 - C/C++
