@@ -3,7 +3,7 @@ title:  hi, i'm nancy
 date: 2023-11-05
 ---
 
- currently a 3rd year undergrad in computer engineering & econ at UC Santa Cruz
+ currently a 3rd year undergrad in econ at UC Santa Cruz
 
 ummmmmmm [click here...](https://www.catgirl.mov/)
 ## certifications
